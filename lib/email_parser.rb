@@ -10,6 +10,6 @@ class EmailParser
   end
 
   def parse
-    email.split(/,| /).uniq
+    email.split(/,|\s/).map {|email| email if email.size>2}.uniq
   end
 end
