@@ -10,6 +10,6 @@ class EmailParser
   end
 
   def parse
-    self.email.split(",|/s").map {|email| email}
+    self.email.split("/\s/").map {|email| email}
   end
 end
